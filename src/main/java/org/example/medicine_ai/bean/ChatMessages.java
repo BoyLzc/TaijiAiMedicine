@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @AllArgsConstructor // 全参
 @NoArgsConstructor // 无参
-@Document("test") // 数据库中文档名(表名)
+@Document("test") // Mongodb 数据库中文档名(表名)
 public class ChatMessages {
 
     // 唯一标识，映射到MongoDB文档的 _id 字段

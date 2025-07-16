@@ -19,8 +19,7 @@ public class AppointmentServiceImpl extends ServiceImpl<AppointmentMapper, Appoi
         objectLambdaQueryWrapper.eq(Appointment::getDepartment, appointment.getDepartment());
         objectLambdaQueryWrapper.eq(Appointment::getDate, appointment.getDate());
         objectLambdaQueryWrapper.eq(Appointment::getTime, appointment.getTime());
-        Appointment appointmentDB = baseMapper.selectOne(objectLambdaQueryWrapper);
-        return appointmentDB;
+        return baseMapper.selectOne(objectLambdaQueryWrapper);
     }
 
 }

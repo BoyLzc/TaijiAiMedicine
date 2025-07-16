@@ -33,7 +33,8 @@ public class XiaoZhiAgentConfig {
         chatMemoryStore(mongoChatMemoryStore). // 聊天记忆持久化
                         build();
     }
-    // 存入内存向量数据库
+
+    // 存入内存向量数据库 构建RAG
     @Bean
     public ContentRetriever contentRetrieverXiaoZhi() {
 

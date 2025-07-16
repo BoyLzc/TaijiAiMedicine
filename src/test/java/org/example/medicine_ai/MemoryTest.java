@@ -29,15 +29,15 @@ public class MemoryTest {
         System.out.println(answer2);
     }
 
-/*    @Autowired
+    @Autowired
     MemoryAssistant memoryAssistant;
     @Test
     public void testMemoryByMemoryAssistant() {
-        String answer = memoryAssistant.chat("我是boylzc");
+        String answer = memoryAssistant.chat("李华","我是刘翔");
         System.out.println(answer);
-        String answer2 = memoryAssistant.chat("我是谁？");
+        String answer2 = memoryAssistant.chat("李华","我是谁？");
         System.out.println(answer2);
-    }*/
+    }
 
     // 用户记忆隔离测试
     @Autowired
@@ -48,11 +48,11 @@ public class MemoryTest {
         System.out.println(chat);
         String chat2 = separateChatAssistant.chat(1, "我是谁？");
         System.out.println(chat2);
-        String chat3 = separateChatAssistant.chat(2, "我是xxxx");
+/*        String chat3 = separateChatAssistant.chat(2, "我是xxxx");
         System.out.println(chat3);
         String chat4 = separateChatAssistant.chat(2, "我是谁？");
         System.out.println(chat4);
         String chat5 = separateChatAssistant.chat(1, "我是谁？");
-        System.out.println(chat5);
+        System.out.println(chat5);*/
     }
 }

@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class getMemoryInfo {
-
     @Bean
     public ChatMemory chatMemory() {
         return MessageWindowChatMemory.withMaxMessages(10);

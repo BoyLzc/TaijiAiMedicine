@@ -10,7 +10,7 @@ import dev.langchain4j.service.spring.AiServiceWiringMode;
 @AiService(
         wiringMode = AiServiceWiringMode.EXPLICIT,
         chatModel = "openAiChatModel",
-        chatMemoryProvider = "chatMemoryProvider", // bean
+        chatMemoryProvider = "chatMemoryProvider", // bean 记忆注入
         tools = "calculatorTools" // 工具类 计算
 )
 // 每个用户的记忆隔离

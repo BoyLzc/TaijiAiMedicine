@@ -4,7 +4,12 @@ import dev.langchain4j.service.spring.AiService;
 import dev.langchain4j.service.spring.AiServiceWiringMode;
 
 // 要指明模型 因为配置了多个
-@AiService(wiringMode = AiServiceWiringMode.EXPLICIT, chatModel = "openAiChatModel")
+@AiService(
+        wiringMode = AiServiceWiringMode.EXPLICIT,
+        chatModel = "openAiChatModel"
+//        chatModel = "qwenChatModel"
+//        chatModel = "ollamaChatModel"
+)
 public interface Assistant {
     String chat(String userMessage);
 }

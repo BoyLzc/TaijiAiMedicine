@@ -1,6 +1,7 @@
 package org.example.medicine_ai;
 
 import dev.langchain4j.community.model.dashscope.QwenChatModel;
+import dev.langchain4j.model.ollama.OllamaChatModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import dev.langchain4j.service.AiServices;
 import dev.langchain4j.service.spring.AiService;
@@ -13,6 +14,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class AssistantTest {
     @Autowired
     private OpenAiChatModel openAiChatModel;
+    @Autowired
+    private QwenChatModel qwenChatModel;
+    @Autowired
+    private OllamaChatModel ollamaChatModel;
 
     // 不使用AiService注解，手动配置，较为麻烦
     @Test
@@ -26,7 +31,7 @@ public class AssistantTest {
     Assistant assistant;
     @Test
     public void SpringAssistant(){
-        String chat = assistant.chat("我是足球之神");
+        String chat = assistant.chat("你是谁");
         System.out.println(chat);
     }
 }
